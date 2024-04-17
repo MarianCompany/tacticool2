@@ -1,5 +1,5 @@
 <template>
-  <a target="_blank" href="">
+  <a target="_blank" href="https://www.panzerdog.com/">
     <svg
       width="150"
       height="34"

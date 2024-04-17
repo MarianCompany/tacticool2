@@ -53,6 +53,25 @@
 
           amplitude.getInstance().init('1ef6ace8701d0caf63f1238a1a46c128');
       </script>
+      <script type="text/javascript" vars="105039" referrerpolicy="no-referrer-when-downgrade">
+          const f = () => {
+              var partnerScript = document.createElement("script");
+              partnerScript.type = "text/javascript";
+              partnerScript.async = true;
+              partnerScript.src =
+                  `//1l-hit.my.games/v1/hit/${105039}.js?r=` +
+                  encodeURIComponent(document.referrer) +
+                  "&l=" +
+                  encodeURIComponent(window.location.href) +
+                  "&u=" +
+                  encodeURIComponent("") +
+                  "&rnd=" +
+                  Math.random();
+              var firstScript = document.getElementsByTagName("script")[0];
+              firstScript.parentNode.insertBefore(partnerScript, firstScript);
+          }
+          f();
+      </script>
   </head>
   <body>
     <div id="app"></div>

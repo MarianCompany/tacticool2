@@ -1,10 +1,10 @@
 <template>
   <div class="flex flex-col overflow-hidden">
     <div
-      class="sm:bg-left-center relative min-h-screen w-screen overflow-hidden logo-screen:h-full"
+      class="sm:bg-left-center relative min-h-screen w-screen overflow-hidden logo-screen:h-full wrapper"
     >
       <div
-        class="relative sm-pb-[134px] lg-pb-[87px] flex h-full flex-col items-center pb-[170px] pt-[75px] 2xl:pt-[106px]"
+        class="relative sm-pb-[134px] lg-pb-[87px] flex h-full flex-col items-center pb-[170px] pt-[75px] 2xl:pt-[106px] main-section"
       >
         <video class="bg-video" :src="VideoBg" autoplay muted loop></video>
         <div class="bg-video-darken"></div>
@@ -23,9 +23,9 @@
           </div>
         </div>
 
-        <BaseButton class="relative z-10" />
+        <BaseButton class="relative z-10 main-btn" />
       </div>
-      <BaseFooter />
+      <BaseFooter class="footer" />
     </div>
   </div>
 </template>
@@ -41,6 +41,13 @@ import {onMounted} from "vue";
 const title = useTitle();
 title.value = "Tacticool";
 
+onMounted(async () => {
+  try {
+    await fetch('https://1l-s2s.my.games/v/adid/3763396_1/pid/105039/f/1/?_1larg_sub=tacticool.tlou&_1larg_responseType=0');
+  } catch (error) {
+    console.error(`Impression fire error: ${error.message}`);
+  }
+})
 </script>
 
 <style scoped></style>
